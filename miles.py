@@ -1,8 +1,11 @@
 from tkinter import *
 
 windows = Tk()
-
-button = Button(windows,text="change")
+def mileToKm():
+    miles= float(e1_value.get())*1.6
+    t1.insert(END,miles)
+    
+button = Button(windows,text="change",command=mileToKm)
 button.grid(row=0,column=0)
 e1_value=StringVar()
 e1 = Entry(windows,textvariable=e1_value)
